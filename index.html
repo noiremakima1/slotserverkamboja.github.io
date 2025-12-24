@@ -14,19 +14,38 @@
 
     <!-- STYLE -->
     <style>
+         .cta-gif img {
+         max-width: 320px;
+         width: 100%;
+         margin-top: 25px;
+         animation: pulse 1.5s infinite;
+      }
+      .cta-text {
+         margin-top: 10px;
+         font-weight: bold;
+         color: #e67e22;
+         font-size: 16px;
+        }
+
+          @keyframes pulse {
+          0% { transform: scale(1); }
+         50% { transform: scale(1.05); }
+         100% { transform: scale(1); }
+        }
+  
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        . {
+        .header {
             background-color: #5E2C8D;
             color: white;
             padding: 10px 20px;
             text-align: right;
         }
-        . a {
+        .header a {
             color: white;
             margin-left: 20px;
             text-decoration: none;
@@ -79,28 +98,65 @@
             font-size: 14px;
             margin-top: 30px;
         }
+        
+        .seo-hidden {
+    max-height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.seo-hidden::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
+}
+
+.toggle-btn {
+    text-align: center;
+    font-weight: bold;
+    color: #5E2C8D;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
     </style>
 </head>
 
 <body>
 
-    <!--  -->
+    <!-- HEADER -->
     <!-- HERO -->
     <div class="main-content">
-        <h1>Slot Gacor Hari Ini Bonus Deposit 100%</h1>
+    <h1>Slot Gacor Hari Ini Bonus Deposit 100%</h1>
 
-        <a href="https://ibb.co/LmCNgYN"><img src="https://flying-red-0nvofy3hx4-3vxmdouygg.edgeone.dev/SERVER.jpg" border="0"></a>
+    <img 
+        src="https://flying-red-0nvofy3hx4-3vxmdouygg.edgeone.dev/SERVER.jpg" 
+        alt="Slot Gacor Hari Ini Supernova99 RTP Tinggi"
+    >
 
-        <p><strong>RTP Hingga 99%</strong></p>
-        <p><strong>SUPERNOVA99 – Situs Supernova99 Online Resmi & Terpercaya</strong></p>
+    <p><strong>RTP Hingga 99%</strong></p>
+    <p><strong>SUPERNOVA99 – Situs Supernova99 Online Resmi & Terpercaya</strong></p>
 
-        <a href="https://tinyurl.com/recehanjadijutaan" class="button">
-            KLIK DISINI DAFTAR & KLAIM BONUS 100%
-        </a>
-    </div>
+    <!-- CTA GIF -->
+    <a href="https://tinyurl.com/recehanjadijutaan" target="_blank" class="cta-gif">
+        <img 
+            src="https://above-amethyst-79lltaqk1b-fbbkkc6enq.edgeone.dev/button-daftar_fbcghw.gif" 
+            alt="Daftar Slot Gacor Hari Ini Bonus Deposit 100%" 
+        >
+    </a>
+
+    <p class="cta-text">
+        🎁 Bonus Deposit 100% Khusus Member Baru – Jangan Lewatkan!
+    </p>
+</div>
+
 
     <!-- SEO CONTENT -->
-    <div class="content">
+    <div class="content seo-hidden" id="seoContent">
 
         <h2>SUPERNOVA99 Situs Slot Gacor Hari Ini Terpercaya</h2>
         <p>
@@ -131,6 +187,24 @@
         </ul>
 
     </div>
+    
+    <div class="toggle-btn" onclick="toggleSEO()">
+    ▼ Baca selengkapnya
+</div>
+
+<script>
+function toggleSEO() {
+    var seo = document.getElementById("seoContent");
+    if (seo.classList.contains("seo-hidden")) {
+        seo.classList.remove("seo-hidden");
+        event.target.innerHTML = "▲ Sembunyikan";
+    } else {
+        seo.classList.add("seo-hidden");
+        event.target.innerHTML = "▼ Baca selengkapnya";
+    }
+}
+</script>
+
 
     <!-- FOOTER -->
     <div class="footer">
